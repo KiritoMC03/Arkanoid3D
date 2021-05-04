@@ -5,9 +5,9 @@ namespace Utils
 {
     public class Validator : MonoBehaviour
     {
-        public static bool CheckField<T>(T field, string inspectorFieldName = "")
+        public static bool CheckFieldOrException<T>(T field, string inspectorFieldName = "")
         {
-            if (field.Equals(null))
+            if (field == null)
             {
                 throw new NullReferenceException($"{inspectorFieldName} field is null.");
             }

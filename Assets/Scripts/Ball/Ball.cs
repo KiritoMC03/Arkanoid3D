@@ -5,7 +5,7 @@ using Utils;
 namespace Arkanoid.Ball
 {
     [RequireComponent(typeof(Rigidbody), typeof(Collider))]
-    public class Ball : MonoBehaviour
+    public class Ball : MonoBehaviour, IBall
     {
         private void OnCollisionEnter(Collision collision)
         {
@@ -14,6 +14,11 @@ namespace Arkanoid.Ball
             {
                 brick.OnBallHitLink?.Invoke();
             }
+        }
+
+        public void Destroy()
+        {
+            Destroy(this);
         }
     }
 }
