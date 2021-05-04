@@ -23,6 +23,11 @@ namespace Arkanoid.GameStatus
 
         private void CheckBallPosition()
         {
+            if(_ball == null)
+            {
+                return;
+            }
+
             if (_ball.position.y < _platform.position.y)
             {
                 OnBallFell?.Invoke();
