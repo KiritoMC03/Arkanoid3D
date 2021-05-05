@@ -80,7 +80,7 @@ namespace ObjectPool
 
         public void DestroyObject(GameObject obj)
         {
-            pools[obj.TryGetInterface<IPooledObject>().Type].objects.Enqueue(obj);
+            pools[obj.GetInterface<IPooledObject>().Type].objects.Enqueue(obj);
             obj.SetActive(false);
         }
     }

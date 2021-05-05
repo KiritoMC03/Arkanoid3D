@@ -1209,6 +1209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 831419555}
+  - component: {fileID: 831419557}
   - component: {fileID: 831419556}
   m_Layer: 17
   m_Name: Right
@@ -1244,6 +1245,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 30, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &831419557
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831419554}
+  serializedVersion: 2
+  m_Mass: 100000000
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &849041871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1537,6 +1554,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 990073385}
+  - component: {fileID: 990073387}
   - component: {fileID: 990073386}
   m_Layer: 17
   m_Name: Top
@@ -1572,6 +1590,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &990073387
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990073384}
+  serializedVersion: 2
+  m_Mass: 100000000
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1017634103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2158,6 +2192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1554696267}
   - component: {fileID: 1554696269}
+  - component: {fileID: 1554696270}
   - component: {fileID: 1554696266}
   - component: {fileID: 1554696265}
   - component: {fileID: 1554696268}
@@ -2272,6 +2307,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca067d774030ec24f9db9a43dcccab97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxOffset: 4
+  _platformMotor: {fileID: 1554696263}
+--- !u!114 &1554696270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554696263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca49367ed78a114489b5ce1abff38827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1577660310
@@ -2577,6 +2626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1818324811}
+  - component: {fileID: 1818324813}
   - component: {fileID: 1818324812}
   m_Layer: 17
   m_Name: Left
@@ -2612,6 +2662,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 30, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1818324813
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818324810}
+  serializedVersion: 2
+  m_Mass: 100000000
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1833052456
 GameObject:
   m_ObjectHideFlags: 0

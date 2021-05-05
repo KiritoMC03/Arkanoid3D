@@ -5,7 +5,7 @@ namespace Utils
 {
     public static class UnityGameObjectExtensions
     {
-        public static Interface TryGetInterface<Interface>(this GameObject thisGameObject, string usedObjectInspectorName = "")
+        public static Interface GetInterface<Interface>(this GameObject thisGameObject, string usedObjectInspectorName = "")
         {
             try
             {
@@ -22,9 +22,9 @@ namespace Utils
             return default;
         }
 
-        public static Interface TryGetInterface<Interface>(this Component thisComponent, string usedComponentInspectorName = "")
+        public static Interface GetInterface<Interface>(this Component thisComponent, string usedComponentInspectorName = "")
         {
-            return thisComponent.gameObject.TryGetInterface<Interface>(usedComponentInspectorName);
+            return thisComponent.gameObject.GetInterface<Interface>(usedComponentInspectorName);
         }
     }
 }

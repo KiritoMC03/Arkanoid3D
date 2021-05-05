@@ -21,14 +21,14 @@ namespace Arkanoid.Ball
 
         private void InitFields()
         {
-            _ball = _ballPrefab.TryGetInterface<IBall>("Ball Prefab");
+            _ball = _ballPrefab.GetInterface<IBall>("Ball Prefab");
         }
 
         public void Spawn()
         {
             var newBall =  ObjectPooler.Instance.GetObject(_ball.Type);
             newBall.transform.position = _startPosition;
-            newBall.TryGetInterface<IBall>("Ball Prefab").ResetRigidbody();
+            newBall.GetInterface<IBall>("Ball Prefab").ResetRigidbody();
         }
     }
 }
