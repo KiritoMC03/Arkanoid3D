@@ -20,6 +20,7 @@ namespace Arkanoid.Bricks
         public void Destroy()
         {
             Score.Instance.Increase();
+            BrickCounter.Instance.Decrease(1);
             Destroy(gameObject);
         }
     }

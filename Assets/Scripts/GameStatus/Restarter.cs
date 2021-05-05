@@ -3,14 +3,15 @@ using System.Collections;
 using Arkanoid.Ball;
 using System;
 using Utils;
+using UnityEngine.Events;
 
-namespace Assets.Scripts.GameStatus
+namespace Arkanoid.GameStatus
 {
     public class Restarter : MonoBehaviour
     {
-        [Header("Implement IBallSpawner.")]
-        [SerializeField] private GameObject _ballSpawner = null;
-        private IBallSpawner _spawner = null;
+        [Header("Implement IStarter.")]
+        [SerializeField] private GameObject _gameStarter = null;
+        private IStarter _starter = null;
 
         private void Awake()
         {
@@ -19,12 +20,12 @@ namespace Assets.Scripts.GameStatus
 
         private void InitFields()
         {
-            _spawner = _ballSpawner.GetInterface<IBallSpawner>("Ball Spawner");
+            _starter = _gameStarter.GetInterface<IStarter>("Game Starter");
         }
 
         public void Restart()
         {
-            _spawner.Spawn();
+            _starter.StartGame();
         }
     }
 }

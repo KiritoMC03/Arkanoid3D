@@ -7,19 +7,15 @@ namespace Utils
     {
         public static Interface GetInterface<Interface>(this GameObject thisGameObject, string usedObjectInspectorName = "")
         {
-            try
+            var obj = thisGameObject.GetComponent<Interface>();
+            if (obj != null)
             {
-                var obj = thisGameObject.GetComponent<Interface>();
-                if (obj.NotEquals(null))
-                {
-                    return obj;
-                }
+                return obj;
             }
-            catch (Exception)
+            else
             {
                 throw new NullReferenceException($"Component {usedObjectInspectorName} does not implemet the target interface.");
             }
-            return default;
         }
 
         public static Interface GetInterface<Interface>(this Component thisComponent, string usedComponentInspectorName = "")

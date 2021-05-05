@@ -1,4 +1,5 @@
-﻿using ObjectPool;
+﻿using Arkanoid.GameStatus;
+using ObjectPool;
 
 namespace Arkanoid.Ball
 {
@@ -7,5 +8,6 @@ namespace Arkanoid.Ball
         ObjectPooler.ObjectInfo.ObjectType Type { get; }
         void ResetRigidbody();
         void Destroy();
+        void SetVictoryTracker(IVictoryTracker victoryTracker);
     }
 }
