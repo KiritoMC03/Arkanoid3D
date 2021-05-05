@@ -1,35 +1,34 @@
-﻿using UnityEngine;
+﻿using Arkanoid.Ball;
+using System;
+using UnityEngine;
 using UnityEngine.Events;
 using Utils;
 
 namespace Arkanoid.GameStatus
 {
+    [RequireComponent(typeof(Collider))]
     public class LossTracker : MonoBehaviour
     {
         public UnityEvent OnBallFell;
-        [SerializeField] private Transform _ball = null;
-        [SerializeField] private Transform _platform = null;
+        private Collider _collider = null;
 
         private void Awake()
         {
-            Validator.CheckFieldOrException(_ball);
-            Validator.CheckFieldOrException(_platform);
+            InitFields();
+            _collider.isTrigger = true;
         }
 
-        private void Update()
+        private void InitFields()
         {
-            CheckBallPosition();
+            _collider = GetComponent<Collider>();
         }
 
-        private void CheckBallPosition()
+        private void OnTriggerEnter(Collider other)
         {
-            if(_ball == null)
+            var ball = other.gameObject.GetComponent<IBall>();
+            if (ball != null)
             {
-                return;
-            }
-
-            if (_ball.position.y < _platform.position.y)
-            {
+                ball.Destroy();
                 OnBallFell?.Invoke();
             }
         }

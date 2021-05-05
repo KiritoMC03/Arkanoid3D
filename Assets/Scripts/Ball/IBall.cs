@@ -6,5 +6,6 @@ namespace Arkanoid.Ball
     {
         ObjectPooler.ObjectInfo.ObjectType Type { get; }
         void ResetRigidbody();
+        void Destroy();
     }
 }

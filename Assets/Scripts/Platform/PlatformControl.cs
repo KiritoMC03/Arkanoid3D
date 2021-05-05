@@ -23,6 +23,7 @@ namespace Arkanoid.Platform
         {
             InitFields();
             _startPosition = _transform.position;
+            _motor.SetStartPosition(_startPosition);
         }
 
         private void InitFields()

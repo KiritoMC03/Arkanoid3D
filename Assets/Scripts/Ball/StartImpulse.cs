@@ -14,7 +14,7 @@ namespace Arkanoid.Ball
             InitFields();
         }
 
-        private void Start()
+        private void OnEnable()
         {
             _rigidbody.AddForce(_value, ForceMode.Impulse);
         }

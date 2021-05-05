@@ -40,6 +40,7 @@ namespace Arkanoid.Ball
 
         public void Destroy()
         {
+            ResetRigidbody();
             ObjectPooler.Instance.DestroyObject(gameObject);
         }
     }
